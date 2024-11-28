@@ -6,6 +6,8 @@ import AddTask from './Pages/AddTask';
 import 'react-toastify/dist/ReactToastify.css'
 import { ToastContainer } from 'react-toastify';
 import SignIn from './Pages/SignIn';
+import UpdatePage from './Pages/UpdatePage';
+
 
 function App()  {
   return <>
@@ -15,8 +17,9 @@ function App()  {
 
 <Route path="/" element={<HomePage/>}/>
 <Route path="/add" element={<AddTask/>}/>
-
 <Route path ="/user" element={<SignIn/>}/>
+<Route path="/update/:id" element={<UpdatePage/>}/>
+
 {/* le chemin s'appelle en fonction du chemin dans l'onglet de react */}
   </Routes>
   
