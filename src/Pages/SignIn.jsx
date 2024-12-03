@@ -9,12 +9,14 @@ import { InputGroup } from "react-bootstrap";
 const SignIn = () => {
 
 
+
+
 const [user, setUser]=useState({});
 
         const handleChange =(e) =>{
             console.log(e.target.value);
             console.log(e.target.name)
-            setUser({...user,[e.target.name]:e.target.value});
+            setUser({...user,[e.target.name]:e.target.value}); //des qu'un changement est détecter, il va chercher la target (nom champ) et la valeur du champ. va créer une clef(entre crochet)
         }
 
         console.log(user);
@@ -29,7 +31,7 @@ try {
     toast.success("inscription ok")
     
 } catch (error) {
-    console.log(error);
+    console.error(error);
     toast.error("il y a eu un problème lors de votre inscription")
     
 }
@@ -37,7 +39,7 @@ try {
 }
 
     return <>
-    <h1>exemple</h1>
+    <h1 className="d-flex flex-column align-items-center mb-3">Inscription</h1>
     
     <form onSubmit={handleSubmit}> 
     <InputGroup className="mb-3" >
