@@ -91,7 +91,7 @@ const ModifyPage = () => {
         <button className="btn btn-info" type="submit">MODIFIER</button>
         <br />
         <br />
-        <button className="btn btn-info"> <a href="/">Retour à la page d'accueil</a></button>
+        <button className="btn btn-info"> <a href="/tasks">Retour à la page d'accueil</a></button>
       
       </Form>
     </>

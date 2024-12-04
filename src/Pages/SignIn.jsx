@@ -6,6 +6,8 @@ import { InputGroup } from "react-bootstrap";
 
 
 
+
+
 const SignIn = () => {
 
 
@@ -23,12 +25,14 @@ const [user, setUser]=useState({});
 
 const handleSubmit= async (e)=>{
     e.preventDefault();
+   
 
 try {
 
     const response  = await UserService.addUser(user);
     console.log(response);
     toast.success("inscription ok")
+    
     
 } catch (error) {
     console.error(error);
@@ -88,6 +92,7 @@ try {
 
       
     <Form.Control type="submit" value="inscription" className="btn btn-primary"/>
+    <button className="btn btn-info"> <a href="/tasks">Retour à la page d'accueil</a></button>
     </form>
 
 

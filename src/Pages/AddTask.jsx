@@ -53,7 +53,7 @@ try {
           aria-describedby="basic-addon1"
           onChange={handleChange}
           name="libelle_task"
-          required
+          
         /> 
       </InputGroup>
 
@@ -65,7 +65,7 @@ try {
           aria-describedby="basic-addon1"
           onChange={handleChange}
           name="description_task"
-          required
+          
         />
       </InputGroup>
 
@@ -79,7 +79,7 @@ try {
           onChange={handleChange}
           name="date_creation_task"
           type="date"
-          required
+          
         />
       </InputGroup>
 
@@ -92,13 +92,13 @@ try {
           aria-describedby="basic-addon1"
           onChange={handleChange}
           name="id_state"
-          required
+          
         />
       </InputGroup>
 
       
     <Form.Control type="submit" value="Ajouter" className="btn btn-primary"/>
-    <button className="btn btn-info"> <a href="/">Retour à la page d'accueil</a></button>
+    <button className="btn btn-info"> <a href="/tasks">Retour à la page d'accueil</a></button>
     </form>
     </div>
     </Container>;

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Button, Container, Form } from "react-bootstrap";
 import TaskService from "../Services/TaskService";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -6,10 +6,13 @@ import { Navigate, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import ToggleButton from 'react-bootstrap/ToggleButton';
+import AuthContext from "../Context/AuthContext";
+import AuthService from "../Services/AuthService";
 
 
 const HomePage = () => {
   const [tasks, setTasks] = useState([]);
+  const {isAuthentificated, user}=useContext(AuthContext)
   const navigate = useNavigate();
 //   const [deleteTask, setDeleteTask] = useState();
 // const [taskEnCours, setTaskEnCours]=useState();
@@ -50,6 +53,10 @@ const HomePage = () => {
     fetchTasks();
   }, []);
 
+
+AuthService.isValid();
+
+
   return (
 
 
@@ -57,6 +64,9 @@ const HomePage = () => {
     <Container className="d-flex flex-column align-items-center gap 3">
       <h1> Home Page</h1>
 
+
+{isAuthentificated ? "vous êtes connecté" : "vous n'êtes pas connecté"}
+{user.email && <p>Email:{user.email}</p>}
 
       <button > <a href="/add">Ajouter une tâche</a></button>
 

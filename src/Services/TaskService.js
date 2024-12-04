@@ -6,10 +6,8 @@ return axios.get("http://127.0.0.1:3000/todolist/task");
 
 }
 
-function getTaskById(id){
-    return axios.get("http://127.0.0.1:3000/todolist/task/getTaskById/"+id);
-    
-    
+function getTaskByIdUser(){
+    return axios.get("http://127.0.0.1:3000/todolist/task/getTaskByIdUser");
     }
 
 
@@ -28,7 +26,7 @@ function deleteTask(id_task){
 
 export default{
 getAllTask,
-getTaskById,
+getTaskByIdUser,
 addTask,
 modifyTask,
 deleteTask
